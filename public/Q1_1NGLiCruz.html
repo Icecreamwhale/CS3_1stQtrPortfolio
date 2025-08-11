@@ -1,10 +1,20 @@
 <script>
-let age = 14;
-let maxage = 100;
-let numPerDay = 2;
-let total =  (numPerDay * 365) * (maxage - age);
+let age =window.prompt("Enter your age: ", 0);
+let maxage =window.prompt("You will live until the age of : ", 100);
+let numPerDay =window.prompt("Number of daily snacks : ", 0);
 
-document.write(`You will need \n${total} donuts to last you until the ripe old age of \n${maxage} :)`);
+let sure = window.confirm("Are you sure?");
+
+if (sure){
+
+    let total = (numPerDay * 365) * (maxage - age);
+
+    document.write( "You will need " + total + " donuts to last you until the age of " + maxage);
+}
+else {
+    window.alert("run again to reconfirm variables")
+}
+
 
 
 </script>
